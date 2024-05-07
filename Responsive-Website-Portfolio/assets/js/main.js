@@ -3,13 +3,13 @@ const navMenu = document.getElementById("nav-menu"),
   navItem = document.querySelectorAll(".nav__item"),
   header = document.getElementById("header");
 
-// open and close menu
+
 navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("nav__menu--open");
   changeIcon();
 });
 
-// close the menu when the user clicks the nav links
+
 navItem.forEach((item) => {
   item.addEventListener("click", () => {
     if (navMenu.classList.contains("nav__menu--open")) {
@@ -19,7 +19,6 @@ navItem.forEach((item) => {
   });
 });
 
-// Change nav toggle icon
 function changeIcon() {
   if (navMenu.classList.contains("nav__menu--open")) {
     navToggle.classList.replace("ri-menu-3-line", "ri-close-line");
@@ -28,13 +27,6 @@ function changeIcon() {
   }
 }
 
-// Downloading Resume
-// document.getElementsByClassName("btn btn--primary").addEventListener("click", function() {
-//   window.location.href = "../../assets/Calvin Mwangi.pdf"
-// })
-
-
-// Testimonial Slide
 
 const testimonialSlide = new Swiper(".testimonial__wrapper", {
   loop: true,
@@ -62,7 +54,6 @@ const testimonialSlide = new Swiper(".testimonial__wrapper", {
   },
 });
 
-// header scroll animation
 window.addEventListener("scroll", () => {
   if (window.scrollY > 40) {
     header.classList.add("header--scroll");
@@ -71,7 +62,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// ScrollReveal animations
 const sr = ScrollReveal({
   duration: 2000,
   distance: "100px",
